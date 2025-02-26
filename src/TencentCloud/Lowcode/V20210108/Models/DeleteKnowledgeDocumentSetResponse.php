@@ -18,17 +18,17 @@ namespace TencentCloud\Lowcode\V20210108\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDataSourceList返回参数结构体
+ * DeleteKnowledgeDocumentSet返回参数结构体
  *
- * @method DataSourceDetailItems getData() 获取data 数据
- * @method void setData(DataSourceDetailItems $Data) 设置data 数据
+ * @method DeleteKnowledgeDocumentSetRsp getData() 获取新增文件返回信息
+ * @method void setData(DeleteKnowledgeDocumentSetRsp $Data) 设置新增文件返回信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDataSourceListResponse extends AbstractModel
+class DeleteKnowledgeDocumentSetResponse extends AbstractModel
 {
     /**
-     * @var DataSourceDetailItems data 数据
+     * @var DeleteKnowledgeDocumentSetRsp 新增文件返回信息
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeDataSourceListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DataSourceDetailItems $Data data 数据
+     * @param DeleteKnowledgeDocumentSetRsp $Data 新增文件返回信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeDataSourceListResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new DataSourceDetailItems();
+            $this->Data = new DeleteKnowledgeDocumentSetRsp();
             $this->Data->deserialize($param["Data"]);
         }
 
